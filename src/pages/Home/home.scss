@@ -1,0 +1,81 @@
+@import '../../styles/global.scss';
+
+main.Home {
+    @include spacing-lateral();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    height: 100vh;
+
+    .logo-tema {
+        max-width: 32rem;
+        position: relative;
+        top: -20px;
+    }
+
+    button {
+        background-color: $color-main;
+        color: #fff;
+        font-size: 2.5rem;
+        letter-spacing: .5px;
+        position: relative;/*faz os elementos pseudos acompanharem o elemento com a classe*/
+        top: -20px;
+
+        height: 35px;
+        line-height: 35px; /*Centraliza o texto*/
+        padding:  .2rem 1rem 0;
+
+        will-change: filter;
+        filter: drop-shadow(0 0 5px $color-main);
+        transition: all .3s ease-in-out;
+
+        &::before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            top: 0px;
+            position: absolute;
+            border-top: 35px solid transparent;
+            border-right: 2px solid $color-main;
+            left: -1px;
+            transform: rotate(0deg);
+        }
+        &::after {
+            content: "";
+            width: 0px;
+            height: 0px;
+            top: 0px;
+            position: absolute;
+            border-bottom: 35px solid transparent;
+            border-left: 7px solid $color-main;
+            right: -5px;
+            transform: rotate(-4deg);
+        }
+
+        &:hover {
+            filter: drop-shadow(0 0 9px $color-main) brightness(1.1);
+        }
+        &:active {
+            filter: drop-shadow(0 0 8px $color-main) brightness(0.8);
+        }
+    }
+
+    .rodape {
+        position: absolute;
+        bottom: 10px;
+
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        img:first-child {
+            max-width: 40px;
+        }
+        img {
+            max-width: 80px;
+            // object-fit: contain;
+        }
+    }
+}
