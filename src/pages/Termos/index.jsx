@@ -18,11 +18,11 @@ export default function Termos() {
 
 
     return (
-        <main className='Container'>
+        <main className='Container fadeIn3'>
             <div className="grid">
                 
             
-            <h1>Avisos e termos de uso</h1>
+            <h1>Avisos e termos de uso:</h1>
 
             <div className="termo-scroll">
                 <h2>Termos de Compromisso</h2>
@@ -38,7 +38,7 @@ export default function Termos() {
             </label>
 
             <div className="div-btn">
-                <button onClick={()=> navigate('/instrucoes')} disabled={!isChecked}>
+                <button className='next' onClick={()=> navigate('/instrucoes')} disabled={!isChecked}>
                     Avançar
                 </button>
             </div>
