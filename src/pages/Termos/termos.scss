@@ -9,11 +9,20 @@ main.Container {
 
     .termo-scroll {
         background-color: $color-bglight;
-        height: 380px;
-        max-height: 600px;
         overflow-y: auto;
-        @media screen and (min-height: 800px) {
-            height: 480px;
+        height: 320px;
+        // max-height: 600px;
+        @media screen and (min-height: 570px) {
+            height: 380px;
+        }
+        @media screen and (min-height: 590px) {
+            height: 410px;
+        }
+        @media screen and (min-height: 690px) {
+            height: 462px;
+        }
+        @media screen and (min-height: 790px) {
+            height: 560px;
         }
 
         font-family: $font-secundary, sans-serif;
@@ -25,13 +34,16 @@ main.Container {
         h2 {
             margin-bottom: 1rem;
         }
+        p:last-child {
+            margin-bottom: 4rem;
+        }
     }
 
     .checkbox-label {
         display: flex;
         gap: .8rem;
 
-        margin-bottom: 3.5rem;
+        margin-bottom: 3rem;
 
         p {
             position: relative;
@@ -45,6 +57,7 @@ main.Container {
         padding-right: 1rem;
 
         button {
+            // posso futuramente fazer um mixin desse estilo btn
             background-color: $color-main;
             color: #fff;
             font-size: 2rem;
@@ -53,9 +66,9 @@ main.Container {
             position: relative;/*faz os elementos pseudos acompanharem o elemento com a classe*/
             height: 35px;
             line-height: 35px; /*Centraliza o texto*/
-            padding:  .2rem 1rem 0;
+            padding: .2rem 1rem 0;
     
-            will-change: filter;
+            // will-change: filter;
             filter: drop-shadow(0 0 5px $color-main);
     
             transition: all .3s ease-in-out;
@@ -68,8 +81,7 @@ main.Container {
                 position: absolute;
                 border-top: 35px solid transparent;
                 border-right: 2px solid $color-main;
-                left: -1px;
-                transform: rotate(0deg);
+                left: -1.8px;
             }
             &::after {
                 content: "";
@@ -77,17 +89,16 @@ main.Container {
                 height: 0px;
                 top: 0px;
                 position: absolute;
-                border-bottom: 35px solid transparent;
+                border-bottom: 36px solid transparent;
                 border-left: 7px solid $color-main;
-                right: -5px;
-                transform: rotate(-4deg);
+                right: -6px;
             }
     
             &:hover {
-                filter: drop-shadow(0 0 9px $color-main) brightness(1.1);
+                filter: drop-shadow(0 0 15px $color-main) brightness(1.1);
             }
             &:active {
-                filter: drop-shadow(0 0 8px $color-main) brightness(0.8);
+                filter: drop-shadow(0 0 15px $color-main) brightness(0.8);
             }
         }
     }

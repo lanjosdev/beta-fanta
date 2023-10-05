@@ -150,20 +150,115 @@ body, input, textarea, button, select, a {
 
 
 /* ANIMAÇÕES */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+.fadeIn {
+    animation: fadeIn .5s ease;
+}
+
+
 @keyframes movendo {
     0% {
-        transform: translateY(0px) rotate(1.8deg);
+        transform: scale(1) rotate(1.8deg);
     }
 
     50% {
-        transform: translateY(-7px) rotate(1.8deg);
+        transform: scale(1.08) rotate(1.8deg);
     }
     
     100% {
-        transform: translateY(0px) rotate(1.8deg);
+        transform: scale(1) rotate(1.8deg);
     }        
 }
 .movendo {
-    animation: movendo 1.5s linear infinite;
+    animation: movendo 2.5s linear infinite;
+}
+
+
+@keyframes go-back-l {
+    0% {
+        transform: translateX(0) scaleX(-1);
+        opacity: .7;
+    }
+    40% {
+        transform: translateX(-400px) scaleX(-1);
+        opacity: .3;
+    }
+    100% {
+        transform: translateX(0) scaleX(-1);
+        opacity: .7;
+    }
+}
+.nuvem-goL {
+    animation: go-back-l 25s linear infinite;
+}
+
+@keyframes go-back-r {
+    0% {
+        transform: translateX(0);
+        opacity: .7;
+    }
+    50% {
+        transform: translateX(300px);
+        opacity: .3;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: .7;
+    }
+}
+.nuvem-goR {
+    animation: go-back-r 25s linear infinite;
+}
+
+
+@keyframes aparecendo {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .8;
+    }
+    
+    100% {
+        opacity: 0;
+    }        
+}
+.aparecendo {
+    animation: aparecendo 5.5s linear infinite;
+}
+.aparecendo2 {
+    animation: aparecendo 6.5s linear infinite;
+}
+
+
+@keyframes flash {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+    80% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.flash {
+    animation: flash .3s ease;
 }
 /* ANIMAÇÕES */
