@@ -189,37 +189,31 @@ body, input, textarea, button, select, a {
 @keyframes go-back-l {
     0% {
         transform: translateX(0) scaleX(-1);
-        opacity: .7;
     }
     40% {
         transform: translateX(-400px) scaleX(-1);
-        opacity: .3;
     }
     100% {
         transform: translateX(0) scaleX(-1);
-        opacity: .7;
     }
 }
 .nuvem-goL {
-    animation: go-back-l 25s linear infinite;
+    animation: go-back-l 40s linear infinite;
 }
 
 @keyframes go-back-r {
     0% {
         transform: translateX(0);
-        opacity: .7;
     }
-    50% {
+    40% {
         transform: translateX(300px);
-        opacity: .3;
     }
     100% {
         transform: translateX(0);
-        opacity: .7;
     }
 }
 .nuvem-goR {
-    animation: go-back-r 25s linear infinite;
+    animation: go-back-r 40s linear infinite;
 }
 
 
@@ -254,7 +248,7 @@ body, input, textarea, button, select, a {
     55% {
         opacity: 0;
     }
-    80% {
+    75% {
         opacity: .7;
     }
     100% {
@@ -262,6 +256,20 @@ body, input, textarea, button, select, a {
     }
 }
 .flash {
-    animation: flash .3s ease;
+    animation: flash .4s ease;
+}
+
+@keyframes exibicao {
+    from {
+      opacity: 0;
+      transform: scale(.6);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
+.exibir {
+    animation: exibicao 1s ease-in-out;
 }
 /* ANIMAÇÕES */

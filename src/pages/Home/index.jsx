@@ -7,7 +7,7 @@ import logo from '../../assets/GifLogo.gif';
 import logoFanta from '../../assets/logo-fantaPreto.png';
 import nuvem from "../../assets/icones/nuvem.png"
 import olhos from "../../assets/icones/olhos.png"
-import relampago from "../../assets/icones/raio.png"
+import relampago from "../../assets/icones/raio2.png"
 
 
 // Estilo:
@@ -15,7 +15,7 @@ import './home.scss';
 
 
 export default function Home() {
-    const [clicou , setClicou] = useState(false);
+    const [clicou, setClicou] = useState(false);
     const navigate = useNavigate();
 
     function effectButton() {
@@ -23,7 +23,7 @@ export default function Home() {
 
         setTimeout(()=> {
             navigate('/termos');            
-        }, 300);
+        }, 400);
     }
 
     return (
@@ -53,8 +53,12 @@ export default function Home() {
             <img className='olhos2 aparecendo2' src={olhos} alt="" />
             
             {clicou && (
-            <div className='bg-raio flash'>
-                <img className='raio' src={relampago} alt="" />
+            <div className='div-raio'>
+
+                <div className='bg flash'></div>
+
+                <img className='raio flash' src={relampago} alt="" />
+
             </div>
             )}
             

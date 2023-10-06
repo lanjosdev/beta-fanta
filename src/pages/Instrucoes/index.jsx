@@ -2,6 +2,9 @@
 import { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 
+// Components:
+import { Modal } from '../../components/Modal/modal';
+
 // Assets:
 import step1 from '../../assets/instrucoes/jogo_02.png';
 import step2 from '../../assets/instrucoes/jogo_03.png';
@@ -13,10 +16,13 @@ import './instrucoes.scss';
 
 export default function Instrucoes() {
     const [step, setStep] = useState(1);
+    const [modalOpen, setModalOpen] = useState(false);
     // const navigate = useNavigate();
 
     function handleNext() {
-        if(step < 3) {
+        if(step === 3) {
+            setModalOpen(true);
+        } else {
             setStep(step + 1);
         }
     }
@@ -32,7 +38,7 @@ export default function Instrucoes() {
 
                 {step === 1 ? (
 
-                <div className="step">
+                <div className="step  exibir">
                     <img src={step1} alt="" />
 
                     <p>Quer saber como jogar e ganhar uma Fanta? Avance para saber.</p>
@@ -41,18 +47,18 @@ export default function Instrucoes() {
                 ) : (
                 step === 2 ? (
 
-                <div className="step">
+                <div className="step exibir">
                     <img src={step2} alt="" />
 
-                    <p>O jogo irá iniciar no painel, e você terá que copiar os movimentos da caveira a sua frente.</p>
+                    <p>O jogo irá iniciar no painel a sua frente, o objetivo é fazer o esqueleto pegar a lata da Fanta com seus movimentos.</p>
                 </div>
 
                 ) : (
 
-                <div className="step">
+                <div className="step exibir">
                     <img src={step3} alt="" />
 
-                    <p>Acertando os movimentos, você ganhará uma Fanta no final do jogo!</p>
+                    <p>Essa será a imagem exibida ao atingir o objetivo, e você ganhará uma Fanta após o jogo! E ai, bora jogar?</p>
                 </div>
 
                 )
@@ -69,9 +75,11 @@ export default function Instrucoes() {
                 )}
 
                 <button className={`next`} onClick={handleNext}>
-                    {step == 1 ? 'Quero saber' : step === 3 ? 'Quero jogar!' : "Próximo"}
+                    {step === 3 ? 'Quero jogar!' : "Próximo"}
                 </button>
             </div>
+
+            {modalOpen && <Modal closeModal={()=> setModalOpen(false)} />}
 
 
             </div>            

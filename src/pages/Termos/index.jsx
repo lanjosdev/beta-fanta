@@ -18,7 +18,7 @@ export default function Termos() {
 
 
     return (
-        <main className='Container fadeIn3'>
+        <main className='Container fadeIn'>
             <div className="grid">
                 
             

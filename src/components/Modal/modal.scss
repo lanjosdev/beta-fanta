@@ -1,0 +1,111 @@
+@import '../../styles/global.scss';
+
+div.Modal-container {
+    @include spacing-lateral();
+    background-color: rgba(35, 35, 35, 0.6);
+    backdrop-filter: blur(2px);
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+
+    animation: showModal .3s ease-in-out;
+
+    .modal-background {   
+        position: absolute;    
+        width: 100%;
+        height: 100%;
+        z-index: 21;
+    }
+
+    .modal-window {
+        background-color: $color-bglight;
+        color: #000;
+        position: relative;
+        z-index: 30;
+
+        width: 100%;
+        max-width: 30rem;
+        
+        margin: 0 auto;
+        margin-top: 70%;
+        padding: 2rem;  
+        border-radius: 10px;      
+        box-shadow: 0 0 20px 5px #00000085;
+
+        animation: showModal .5s ease-in-out;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            margin-bottom: 2rem;
+        }
+        button {
+            background-color: $color-main;
+            width: 150px;
+            color: #fff;
+            font-size: 2rem;
+            letter-spacing: .5px;
+    
+            position: relative;/*faz os elementos pseudos acompanharem o elemento com a classe*/
+            height: 35px;
+            line-height: 35px; /*Centraliza o texto*/
+            padding: .2rem 1rem 0;
+    
+            // will-change: filter;
+            filter: drop-shadow(0 0 5px $color-main);
+    
+            transition: all .3s ease-in-out;
+    
+            &::before {
+                content: "";
+                width: 0px;
+                height: 0px;
+                top: 0px;
+                position: absolute;
+                border-top: 35px solid transparent;
+                border-right: 2px solid $color-main;
+                left: -1.8px;
+            }
+            &::after {
+                content: "";
+                width: 0px;
+                height: 0px;
+                top: 0px;
+                position: absolute;
+                border-bottom: 36px solid transparent;
+                border-left: 7px solid $color-main;
+                right: -6px;
+            }
+    
+            &:hover {
+                filter: drop-shadow(0 0 15px $color-main) brightness(1.1);
+            }
+            &:active {
+                filter: drop-shadow(0 0 15px $color-main) brightness(0.8);
+            }
+        }
+    }
+
+
+    // ANIMAÇÕES:
+    @keyframes showModal {
+        0% {
+            opacity: 0; 
+        }
+        100% {
+            opacity: 1; 
+        }
+    }
+}
+
