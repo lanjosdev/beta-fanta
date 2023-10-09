@@ -6,9 +6,9 @@ import { useState } from 'react';
 import { Modal } from '../../components/Modal/modal';
 
 // Assets:
-import step1 from '../../assets/instrucoes/jogo_02.png';
-import step2 from '../../assets/instrucoes/jogo_03.png';
-import step3 from '../../assets//instrucoes/jogo_04.png';
+import step1 from '../../assets/instrucoes/jogo_2.jpg';
+import step2 from '../../assets/instrucoes/jogo_3.jpg';
+import step3 from '../../assets//instrucoes/jogo_4.jpg';
 
 // Estilo:
 import './instrucoes.scss';

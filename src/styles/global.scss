@@ -170,15 +170,15 @@ body, input, textarea, button, select, a {
 
 @keyframes movendo {
     0% {
-        transform: scale(1) rotate(1.8deg);
+        transform: scale(1) rotate(1deg);
     }
 
     50% {
-        transform: scale(1.08) rotate(1.8deg);
+        transform: scale(1.08) rotate(1deg);
     }
     
     100% {
-        transform: scale(1) rotate(1.8deg);
+        transform: scale(1) rotate(1deg);
     }        
 }
 .movendo {

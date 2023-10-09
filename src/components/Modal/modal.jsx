@@ -22,7 +22,7 @@ export function Modal({ closeModal }) {
 
                 <p>(Incluir texto de aviso que o jogo será iniciado no painel.)</p>
 
-                <button onClick={closeModal}>ok</button>
+                <button onClick={closeModal}>Ok</button>
             </div>
 
         </div>
