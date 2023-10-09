@@ -46,17 +46,17 @@ main.Container {
         // }
     }
 
-    .div-btn.tutorial {
+    .div-btn {
         // justify-content: space-between;
-        gap: 2.5rem;
+        gap: 3rem;
 
-        .voltar {
+        button.voltar {
             background-color: transparent;
             color: $color-main;
             font-size: 2rem;
             letter-spacing: .5px;
     
-            padding: .2rem 1rem 0;
+            padding: .4rem 0 0 0;
 
             transition: all .3s ease-in-out;
     

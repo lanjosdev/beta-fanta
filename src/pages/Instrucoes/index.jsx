@@ -56,7 +56,7 @@ export default function Instrucoes() {
                 </div>                
             </div>            
 
-            <div className={`div-btn ${step > 1 && 'tutorial'}`}>
+            <div className='div-btn'>
                 {step > 1 && (
                 <button className='voltar' onClick={()=> setStep(step - 1)}>
                     Anterior
@@ -67,6 +67,7 @@ export default function Instrucoes() {
                     {step === 3 ? 'Quero jogar!' : "Próximo"}
                 </button>
             </div>
+
 
             {modalOpen && <Modal closeModal={()=> setModalOpen(false)} />}
 
