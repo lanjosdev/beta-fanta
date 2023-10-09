@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Modal } from '../../components/Modal/modal';
 
 // Assets:
-import step1 from '../../assets/instrucoes/jogo_2.jpg';
+import step1 from '../../assets/instrucoes/aranha_step1.jpg';
 import step2 from '../../assets/instrucoes/jogo_3.jpg';
 import step3 from '../../assets//instrucoes/jogo_4.jpg';
 
@@ -32,39 +32,28 @@ export default function Instrucoes() {
             <div className="grid">
                 
             
-            <h1 className='title'>Instruções do Jogo:</h1>
+            <h1>Instruções do Jogo:</h1>
 
             <div className="instrucoes">
+                <div className={`step ${step === 1 && 'exibir'}`}>
+                    <p>Se posicione na marcação do chão (no caso, a marcação seria a imagem abaixo).</p>
 
-                {step === 1 ? (
-
-                <div className="step  exibir">
                     <img src={step1} alt="" />
-
-                    <p>Quer saber como jogar e ganhar uma Fanta? Avance para saber.</p>
                 </div>
 
-                ) : (
-                step === 2 ? (
+                <div className={`step ${step === 2 && 'exibir'}`}>
+                    <p>O jogo irá iniciar no painel a sua frente, o objetivo é fazer a caveira tomar a lata da Fanta, a partir dos seus movimentos.</p>
 
-                <div className="step exibir">
                     <img src={step2} alt="" />
-
-                    <p>O jogo irá iniciar no painel a sua frente, o objetivo é fazer o esqueleto pegar a lata da Fanta com seus movimentos.</p>
+                    {/* <p>O jogo irá iniciar no painel a sua frente, o objetivo é fazer o esqueleto pegar a lata da Fanta com seus movimentos.</p> */}
                 </div>
 
-                ) : (
-
-                <div className="step exibir">
-                    <img src={step3} alt="" />
-
+                <div className={`step ${step === 3 && 'exibir'}`}>
                     <p>Essa será a imagem exibida ao atingir o objetivo, e você ganhará uma Fanta após o jogo! E ai, bora jogar?</p>
-                </div>
 
-                )
-
-                )}
-                
+                    <img src={step3} alt="" />
+                    {/* <p>Essa será a imagem exibida ao atingir o objetivo, e você ganhará uma Fanta após o jogo! E ai, bora jogar?</p> */}
+                </div>                
             </div>            
 
             <div className={`div-btn ${step > 1 && 'tutorial'}`}>
@@ -74,7 +63,7 @@ export default function Instrucoes() {
                 </button>
                 )}
 
-                <button className={`next`} onClick={handleNext}>
+                <button className='next' onClick={handleNext}>
                     {step === 3 ? 'Quero jogar!' : "Próximo"}
                 </button>
             </div>

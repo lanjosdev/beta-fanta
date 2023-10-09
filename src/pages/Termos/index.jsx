@@ -25,16 +25,25 @@ export default function Termos() {
             <h1>Avisos e termos de uso:</h1>
 
             <div className="termo-scroll">
-                <h2>Termos de Compromisso</h2>
+                <h2>Termos de Aceite</h2>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam labore, molestias, aliquam ab molestiae temporibus voluptatum dolor praesentium, a minus enim ullam quibusdam officiis sequi excepturi aliquid doloremque assumenda soluta.</p>
-                <p>Ipsum dolor sit amet consectetur adipisicing elit. Dicta, minus tenetur voluptatibus obcaecati nostrum molestiae eaque iste quos cupiditate odit exercitationem totam eligendi minima adipisci fugiat incidunt, labore magnam cum!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam labore, molestias, aliquam ab molestiae temporibus voluptatum dolor praesentium, a minus enim ullam quibusdam officiis sequi excepturi aliquid doloremque assumenda soluta.</p>
+                <ul>
+                    <li>
+                        <p><b>Não haverá armazenamento dos dados:</b> <br />
+                        Para esta campanha, a Fanta declara e garante que não haverá qualquer captação, armazenamento ou tratamento de dados pessoais, se responsabilizando exclusivamente por tal declaração, além de esclarecer que atua segundo as regras e em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), garantindo a sua privacidade e segurança.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Responsabilidade de idade:</b> <br />
+                        Esta campanha é destinada a todo e qualquer consumidor que adere de forma livre e consciente, desde que pessoa física com idade igual ou superior a 12 (doze) anos. A Fanta declara que está em conformidade com as orientações previstas na legislação para a distribuição dos seus produtos e reforça que é proibida a distribuição de refrigerantes à pessoas menores de 12 anos.
+                        </p>
+                    </li>
+                </ul>
             </div>
             <label className="checkbox-label" htmlFor="checkboxID">
                 <input type="checkbox" id="checkboxID" onClick={() => setIsChecked(!isChecked)} />
 
-                <p>Declaro que li e aceito os termos de compromisso acima.</p>
+                <p>Declaro que li e aceito os Termos acima.</p>
             </label>
 
             <div className="div-btn">

@@ -259,17 +259,21 @@ body, input, textarea, button, select, a {
     animation: flash .4s ease;
 }
 
-@keyframes exibicao {
-    from {
-      opacity: 0;
-      transform: scale(.6);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-}
-.exibir {
-    animation: exibicao 1s ease-in-out;
-}
+// @keyframes exibicao {
+//     from {
+//       opacity: 0;
+//       transform: scale(.6);
+//     }
+//     to {
+//       opacity: 1;
+//       transform: scale(1);
+//     }
+// }
+// .exibir {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     animation: exibicao 1s ease-in-out;
+// }
 /* ANIMAÇÕES */

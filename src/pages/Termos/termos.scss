@@ -27,15 +27,25 @@ main.Container {
 
         font-family: $font-secundary, sans-serif;
         color: #000;
-        padding: 1rem 2rem 1rem 1rem;
+        padding: 1rem;
 
         margin-bottom: 1.5rem;
 
         h2 {
+            text-transform: uppercase;
             margin-bottom: 1rem;
         }
-        p:last-child {
-            margin-bottom: 4rem;
+        // p:last-child {
+        //     margin-bottom: 2rem;
+        // }
+
+        ul {
+            margin-bottom: 5rem;
+            li {
+                list-style: disc;
+                margin: 15px;
+                // padding: 20px;
+            }
         }
     }
 
@@ -43,7 +53,7 @@ main.Container {
         display: flex;
         gap: .8rem;
 
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
 
         p {
             position: relative;

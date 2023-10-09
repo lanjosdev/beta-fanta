@@ -18,9 +18,9 @@ export function Modal({ closeModal }) {
             <div className="modal-background" onClick={closeModal}></div>
 
             <div className="modal-window">
-                <h2>Se prepare!</h2>
+                <h2>Prepare-se!</h2>
 
-                <p>(Incluir texto de aviso que o jogo será iniciado no painel.)</p>
+                <p>Se posicione na marcação que o jogo será iniciado no painel.</p>
 
                 <button onClick={closeModal}>Ok</button>
             </div>
