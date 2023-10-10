@@ -5,4 +5,9 @@ main.Container.fim {
     display: flex;
     align-items: center;
     text-align: center;
+
+    .grid {
+        position: relative;
+        top: -30px;
+    }
 }
