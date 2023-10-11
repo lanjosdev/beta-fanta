@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Termos from "./pages/Termos";
 import Instrucoes from "./pages/Instrucoes";
+import Fim from "./pages/Fim";
 
 
 export function AppRoutes() {
@@ -15,6 +16,8 @@ export function AppRoutes() {
             <Route path="/termos" element={ <Termos/> } />
 
             <Route path="/instrucoes" element={ <Instrucoes/> } />
+
+            <Route path="/fim" element={ <Fim/> } />
         </Routes>
     )
 }
