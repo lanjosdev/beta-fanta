@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 // import 'react-toastify/dist/ReactToastify.css';
 
 // Components:
-import { AppRoutes } from './routes'; //Config de rotas
+import AppRoutes from './routes'; //Config de rotas
 
 // Estilo Global:
 import './styles/global.scss';

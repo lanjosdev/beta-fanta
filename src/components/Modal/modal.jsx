@@ -1,7 +1,8 @@
 // Funcionalidades / Libs:
-import { useState } from "react";
+// import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import PropTypes from "prop-types";
+import Cookies from "js-cookie";
 
 // Assets:
 // import { FiX, FiCheckCircle } from 'react-icons/fi';
@@ -14,6 +15,8 @@ export function Modal({ closeModal }) {
     const navigate = useNavigate();
 
     function handleOk() {
+        Cookies.set('fanta', 'Jogou', { expires: 1 }); // Expira em 1dia (24h)
+
         closeModal(); 
         navigate('/fim', { replace: true });       
     }
@@ -35,8 +38,6 @@ export function Modal({ closeModal }) {
     )
 }
 
-// ModalMedia.propTypes = {
-//     closeModal: PropTypes.func.isRequired,
-//     midiaEdit: PropTypes.object,
-//     updateSequence: PropTypes.func.isRequired
-// }
+Modal.propTypes = {
+    closeModal: PropTypes.func.isRequired,
+}

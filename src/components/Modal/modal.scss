@@ -29,6 +29,7 @@ div.Modal-container {
     .modal-window {
         background-color: $color-bglight;
         color: #000;
+        text-align: center;
         position: relative;
         z-index: 30;
 
@@ -46,11 +47,11 @@ div.Modal-container {
         align-items: center;
 
         h2 {
-            text-align: center;
             margin-bottom: 1.5rem;
         }
         p {
             margin-bottom: 2rem;
+            line-height: 110%;
         }
         button {
             // background-color: $color-main;

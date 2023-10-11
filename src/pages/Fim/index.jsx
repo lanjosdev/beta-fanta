@@ -1,5 +1,6 @@
 // Funcionalidades / Libs:
-// import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Assets:
 // import logo from '../../assets/GifLogo.gif';
@@ -11,6 +12,17 @@ import './fim.scss';
 
 
 export default function Fim() {
+    const navigate = useNavigate();
+
+    useEffect(()=> {
+        function contagem() {
+            setTimeout(()=> {
+                navigate('/', { replace: true });
+            }, 10000);
+        }
+        contagem();
+    }, [navigate]);
+
 
     return (
         <main className='Container fim fadeIn3'>
