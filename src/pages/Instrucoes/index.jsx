@@ -36,7 +36,7 @@ export default function Instrucoes() {
 
             <div className="instrucoes">
                 <div className={`step ${step === 1 && 'exibir'}`}>
-                    <p>Se posicione na marcação do chão (no caso, a marcação seria a imagem abaixo).</p>
+                    <p>Se posicione na marcação da aranha que está no chão em frente a cripta.</p>
 
                     <img src={step1} alt="" />
                 </div>
