@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 // Assets:
 import logo from '../../assets/GifLogo.gif';
-import logoFanta from '../../assets/logo-fantaPreto.png';
+// import logoFanta from '../../assets/logo-fantaPreto.png';
 import nuvem from "../../assets/icones/nuvem.png"
 import olhos from "../../assets/icones/olhos.png"
 import relampago from "../../assets/icones/raio2.png"
@@ -40,10 +40,9 @@ export default function Home() {
                 Atreva-se a clicar
             </button>
 
-            <div className='rodape'>
+            {/* <div className='rodape'>
                 <img src={logoFanta} alt="" />
-            </div>
-
+            </div> */}
 
             <img className='cloud1 nuvem-goR' src={nuvem} alt="" />
             <img className='cloud2 nuvem-goL' src={nuvem} alt="" />

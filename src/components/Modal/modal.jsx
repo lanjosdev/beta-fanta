@@ -1,8 +1,6 @@
 // Funcionalidades / Libs:
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
 import PropTypes from "prop-types";
-
 
 
 // Assets:
@@ -13,12 +11,6 @@ import './modal.scss';
 
 
 export function Modal({ closeModal }) {
-    const navigate = useNavigate();
-
-    function handleOk() {
-        closeModal(); 
-        navigate('/fim', { replace: true });       
-    }
 
     return (
         <div className="Modal-container">
@@ -30,7 +22,7 @@ export function Modal({ closeModal }) {
 
                 <p>Se posicione na marcação que o jogo será iniciado no painel.</p>
 
-                <button onClick={handleOk}>Ok</button>
+                <button onClick={closeModal}>Ok</button>
             </div>
 
         </div>
