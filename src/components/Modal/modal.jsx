@@ -15,6 +15,7 @@ export function Modal({ closeModal }) {
     const navigate = useNavigate();
 
     function handleOk() {
+        // Gera um cookie para indicar que já entrou no jogo:
         Cookies.set('fanta', 'Jogou', { expires: 1 }); // Expira em 1dia (24h)
 
         closeModal(); 

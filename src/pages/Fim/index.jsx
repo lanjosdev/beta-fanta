@@ -1,5 +1,5 @@
 // Funcionalidades / Libs:
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Assets:
@@ -18,7 +18,7 @@ export default function Fim() {
         function contagem() {
             setTimeout(()=> {
                 navigate('/', { replace: true });
-            }, 10000);
+            }, 15000);
         }
         contagem();
     }, [navigate]);

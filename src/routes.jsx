@@ -26,8 +26,11 @@ export default function AppRoutes() {
                 <PrivateRoute> <Instrucoes/> </PrivateRoute>  
             }/>
 
+            <Route path="/fim" element={ 
+                <PrivateRoute> <Fim/> </PrivateRoute>  
+            }/>
 
-            <Route path="/fim" element={ <Fim/> } />
+
             <Route path="/blocked" element={ <Brocked/> } />
         </Routes>
     )

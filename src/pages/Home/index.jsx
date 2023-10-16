@@ -1,6 +1,10 @@
 // Funcionalidades / Libs:
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Cookies from "js-cookie";
+
+// Components:
+import { Cookie } from '../../components/Cookie/cookie';
 
 // Assets:
 import logo from '../../assets/GifLogo.gif';
@@ -9,14 +13,26 @@ import nuvem from "../../assets/icones/nuvem.png"
 import olhos from "../../assets/icones/olhos.png"
 import relampago from "../../assets/icones/raio2.png"
 
-
 // Estilo:
 import './home.scss';
 
 
 export default function Home() {
+    const [openCookie, setOpenCookie] = useState(true);
     const [clicou, setClicou] = useState(false);
     const navigate = useNavigate();
+
+
+    useEffect(()=> {
+        function verificaCookie() {
+            const hasCookie = Cookies.get('fanta');
+
+            if(hasCookie) {
+                setOpenCookie(false);
+            }      
+        }
+        verificaCookie();
+    }, []);
 
     function effectButton() {
         setClicou(true);
@@ -25,6 +41,7 @@ export default function Home() {
             navigate('/termos');            
         }, 400);
     }
+
 
     return (
         <main className='Home'>
@@ -40,9 +57,10 @@ export default function Home() {
                 Atreva-se a clicar
             </button>
 
-            {/* <div className='rodape'>
-                <img src={logoFanta} alt="" />
-            </div> */}
+            {openCookie && (
+            <Cookie closeCookie={()=> setOpenCookie(false)} />            
+            )}
+    
 
             <img className='cloud1 nuvem-goR' src={nuvem} alt="" />
             <img className='cloud2 nuvem-goL' src={nuvem} alt="" />

@@ -1,0 +1,62 @@
+@import '../../styles/global.scss';
+
+div.cookies {
+    background-color: rgba(35, 35, 35, 0.6);
+    // backdrop-filter: blur(2px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    animation: fadeIn .7s ease-in-out;
+
+    .bg-cookies {
+        position: absolute;    
+        width: 100%;
+        height: 100%;
+        z-index: 21;
+    }
+
+    .window-cookies {
+        background-color: $color-bglight;
+        width: 100%;
+        max-width: 480px;
+        padding: 30px 15px;
+        border-radius: 15px 15px 0 0;
+        // box-shadow: 0 0 20px 5px #fff;
+    
+        position: relative;
+        z-index: 30;
+
+        font-family: $font-secundary, sans-serif;
+        color: $black;
+        text-align: center;
+
+        button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+
+            padding: 1px;
+
+            background-color: $color-main;
+            display: flex;
+            align-items: center;
+
+            svg {
+                color: #fff;
+            }
+        }
+
+        h3 {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
