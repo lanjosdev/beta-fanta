@@ -25,7 +25,7 @@ export default function Home() {
 
     useEffect(()=> {
         function verificaCookie() {
-            const hasCookie = Cookies.get('fanta');
+            const hasCookie = Cookies.get('FantaKey');
 
             if(hasCookie) {
                 setOpenCookie(false);

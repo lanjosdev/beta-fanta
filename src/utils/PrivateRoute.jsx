@@ -13,7 +13,7 @@ export default function PrivateRoute({ children }) {
 
     useEffect(()=> {
         function verificaCookie() {
-            const hasCookie = Cookies.get('fanta');
+            const hasCookie = Cookies.get('FantaKey');
 
             if(hasCookie) {
                 setJogou(true);
