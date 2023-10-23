@@ -14,9 +14,26 @@ main.Home {
     overflow: hidden;
 
     .logo-tema {
+        display: flex;
+        flex-direction: column;
         max-width: 32rem;
+
         position: relative;
         top: -10px;
+    }
+    @keyframes moveSpider {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    .spider-move {
+        animation: moveSpider 3s linear infinite;
     }
 
     > button {
@@ -24,6 +41,7 @@ main.Home {
         background-image: url(../../assets/Rectangle.svg);
         background-size: 233px;
         background-repeat: no-repeat;
+
         position: relative;
         top: -10px;
 

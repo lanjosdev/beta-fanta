@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Assets:
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.webp';
 // import logoFanta from '../../assets/logo-fanta.png';
 // import logoBiz from '../../assets/logo_branco_2.png';
 

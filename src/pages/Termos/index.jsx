@@ -30,6 +30,7 @@ export default function Termos() {
                 <ul>
                     <li>
                         <p><b>Não haverá armazenamento dos dados:</b> <br />
+                        A dinâmica só poderá ser iniciada através da leitura de um QR Code, que fará a captação do IP Mask do celular, somente com a finalidade de organizar e limitar o número de participantes na ação. Todos os usuários que participarem da ação e finalizarem a dinâmica, poderão retirar a sampling. <br />
                         Para esta campanha, a Fanta declara e garante que não haverá qualquer captação, armazenamento ou tratamento de dados pessoais, se responsabilizando exclusivamente por tal declaração, além de esclarecer que atua segundo as regras e em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), garantindo a sua privacidade e segurança.
                         </p>
                     </li>
