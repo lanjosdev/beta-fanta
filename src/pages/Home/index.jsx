@@ -10,9 +10,9 @@ import Cookies from "js-cookie";
 import logoA from '../../assets/LogoTema.webp';
 import logoB from '../../assets/AranhaTema.webp';
 // import logoFanta from '../../assets/logo-fantaPreto.png';
-import nuvem from "../../assets/icones/nuvem.png"
-import olhos from "../../assets/icones/olhos.png"
-import relampago from "../../assets/icones/raio2.webp"
+import nuvem from "../../assets/icones/nuvem.png";
+import olhos from "../../assets/icones/olhos.png";
+import relampago from "../../assets/icones/raio.png";
 
 // Estilo:
 import './home.scss';
